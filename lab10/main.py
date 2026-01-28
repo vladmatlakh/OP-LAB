@@ -14,7 +14,7 @@ class Person(People):
     def __init__ (self, population_ua,population_usa):
         super().__init__(population_ua,population_usa)
 
-    def nation_populations(self, a):
+    def populations(self, a):
         if a == 'ua':
             return self.population_ua
         else: return self.population_usa
@@ -22,6 +22,6 @@ class Person(People):
         
 people = People(44_000_000, 356_000_000)
 person = Person(44_000_000, 356_000_000)
-print("UA nation population: ",person.nation_populations('ua'))
-print("USA nation population: ",person.nation_populations('usa'))
+print("UA nation population: ",person.populations('ua'))
+print("USA nation population: ",person.populations('usa'))
 print("All people population: ",people.populations())
